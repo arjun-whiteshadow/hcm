@@ -1,0 +1,114 @@
+/**
+ * Created by Joshua Tamang
+*/
+/*-------------------------------------- Fonts Starts -------------------------------------*/
+/*--------------------------------------- Fonts Ends --------------------------------------*/
+/*------------------------------------- Colors Starts -------------------------------------*/
+/*-------------------------------------- Colors Ends --------------------------------------*/
+/*-------------------------------------- Mixins Starts ------------------------------------*/
+/*--------------------------------------- Mixins Ends -------------------------------------*/
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  border: none;
+  outline: none;
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none !important;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+.custom-container {
+  padding: 8rem;
+  margin: auto;
+  position: relative;
+}
+
+.common-btn {
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.common-btn::before {
+  position: absolute;
+  content: "";
+  inset: -2px;
+  border-radius: 8.8rem;
+  z-index: -1;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: -webkit-transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s, -webkit-transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  background-color: red;
+}
+
+.common-btn:hover {
+  border: 3px solid red;
+}
+
+.common-btn:hover:before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.4px;
+}
+
+button {
+  background: unset;
+  border: unset;
+}
+
+p {
+  margin-bottom: 2.2rem;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=global.css.map */

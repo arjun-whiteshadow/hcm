@@ -1,0 +1,122 @@
+/**
+ * Created by Joshua Tamang
+*/
+
+@import "components/fonts_and_colors";
+
+// html{
+//   height: 100%;
+// }
+
+// body{
+//   height: 100%;
+//   font-family: $font-type-1;
+//   font-size: 16px;
+//   font-weight: 300;
+//   color: black;
+//   line-height: inherit;
+
+//   display: block;
+//   padding: 0px;
+//   margin: 0px;
+//   position: absolute;
+//   bottom: 0;
+//   top: 0;
+//   left: 0;0
+//   right: 0;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-type-1;
+  border: none;
+  outline: none;
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none !important;
+  }
+}
+
+a {
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.custom-container {
+  padding: 8rem;
+  margin: auto;
+  position: relative;
+}
+
+.common-btn {
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  &::before {
+    position: absolute;
+    content: "";
+    inset: -2px;
+    border-radius: 8.8rem;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+    background-color: red;
+  }
+  &:hover {
+    border: 3px solid red;
+    &:before {
+      transform: scaleX(1);
+      transform-origin: left center;
+    }
+  }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.4px;
+}
+
+button {
+  background: unset;
+  border: unset;
+}
+
+p {
+  margin-bottom: 2.2rem;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
